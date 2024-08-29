@@ -3,36 +3,63 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Professional Portfolio</title>
+    <title>Wesley Ratko, Data Journalist</title>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <style>
-      .portfolio-item {
-        position: relative;
-        height: 100%;
+      body {
+        font-family: Century Gothic, Gill Sans, Arial, sans-serif;
+        color: #062726;
+        background-color: #33658a;
+      }
+      .bg-light {
+        background-color: #33658a;
+        color: #102b3f;
+      }
+      h1 {
+        font-size: 2rem;
+        font-weight: normal;
+      }
+      .container a {
+        color: #0056b3;
+        text-decoration: none;
+      }
+      .container a:hover {
+        text-decoration: underline;
+      }
+      .card {
+        transition: transform 0.3s;
+      }
+      .card:hover {
+        transform: translateY(-5px);
       }
       .portfolio-label {
         position: absolute;
-        bottom: 10px;
+        top: 10px;
         right: 10px;
-        background-color: rgba(255, 255, 255, 0.7);
-        padding: 5px;
-        border-radius: 3px;
+        background-color: rgba(51, 101, 138, 0.8);
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
       }
     </style>
   </head>
   <body>
-    <header class="bg-light py-3">
+    <div class="bg-light py-3">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-md-6">
-            <h1>Your Name</h1>
+            <h1>Wesley Ratko, Data Journalist</h1>
           </div>
           <div class="col-md-6 text-md-end">
             <img
-              src="/api/placeholder/100/50"
+              src="logo.svg"
               alt="Logo"
               class="img-fluid"
               style="max-height: 50px;"
@@ -40,29 +67,32 @@
           </div>
         </div>
       </div>
-    </header>
+    </div>
 
-    <nav class="bg-dark py-2">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-auto"><a href="#" class="text-white">Github</a></div>
-          <div class="col-auto">
-            <a href="#" class="text-white">LinkedIn</a>
-          </div>
-          <div class="col-auto">
-            <a href="#" class="text-white">X/Twitter</a>
-          </div>
-          <div class="col-auto">
-            <a href="#" class="text-white">San Antonio Express-News</a>
-          </div>
-          <div class="col-auto"><a href="#" class="text-white">Email</a></div>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-auto">
+          <a href="#" class="text-light">Github</a>
+        </div>
+        <div class="col-auto">
+          <a href="https://www.linkedin.com/in/wesleyratko/" class="text-light"
+            >LinkedIn</a
+          >
+        </div>
+        <div class="col-auto">
+          <a href="#" class="text-light">X/Twitter</a>
+        </div>
+        <div class="col-auto">
+          <a href="#" class="text-light">San Antonio Express-News</a>
+        </div>
+        <div class="col-auto">
+          <a href="#" class="text-light">Email</a>
         </div>
       </div>
-    </nav>
+    </div>
 
-    <main class="container my-5">
+    <div class="container my-5" role="main">
       <div class="row row-cols-1 row-cols-md-3 g-4">
-        <!-- Portfolio Item 1 -->
         <div class="col">
           <a href="#" class="text-decoration-none text-dark">
             <div class="card h-100 portfolio-item">
@@ -72,15 +102,13 @@
                 alt="Project 1"
               />
               <div class="card-body">
-                <h2 class="card-title">Project 1</h2>
-                <p class="card-text">Description of Project 1</p>
+                <h2 id="project-1" class="card-title">Project 1</h2>
+                <p>Description of Project 1</p>
               </div>
               <div class="portfolio-label">Label 1</div>
             </div>
           </a>
         </div>
-
-        <!-- Portfolio Item 2 -->
         <div class="col">
           <a href="#" class="text-decoration-none text-dark">
             <div class="card h-100 portfolio-item">
@@ -90,15 +118,13 @@
                 alt="Project 2"
               />
               <div class="card-body">
-                <h2 class="card-title">Project 2</h2>
-                <p class="card-text">Description of Project 2</p>
+                <h2 id="project-2" class="card-title">Project 2</h2>
+                <p>Description of Project 2</p>
               </div>
               <div class="portfolio-label">Label 2</div>
             </div>
           </a>
         </div>
-
-        <!-- Portfolio Item 3 -->
         <div class="col">
           <a href="#" class="text-decoration-none text-dark">
             <div class="card h-100 portfolio-item">
@@ -108,19 +134,14 @@
                 alt="Project 3"
               />
               <div class="card-body">
-                <h2 class="card-title">Project 3</h2>
-                <p class="card-text">Description of Project 3</p>
+                <h2 id="project-3" class="card-title">Project 3</h2>
+                <p>Description of Project 3</p>
               </div>
               <div class="portfolio-label">Label 3</div>
             </div>
           </a>
         </div>
-
-        <!-- Portfolio Items 4-9 (Repeat the structure above) -->
-        <!-- ... -->
       </div>
-    </main>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    </div>
   </body>
 </html>
