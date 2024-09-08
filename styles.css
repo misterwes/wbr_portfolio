@@ -79,6 +79,12 @@ nav a {
   overflow: hidden;
 }
 
+.figure-caption {
+  font-size: 0.8em;
+  color: #6c757d;
+  font-style: italic;
+}
+
 .portfolio-label {
   position: absolute;
   top: 10px;
