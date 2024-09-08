@@ -9,8 +9,7 @@ body {
 }
 
 p {
-  font-family: Baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond,
-    'Times New Roman', serif;
+  font-family: Baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif;
 }
 
 a {
@@ -34,6 +33,7 @@ footer {
   color: #8e8d8a;
   padding: 1rem 0;
   margin-top: auto;
+  flex-shrink: 0;
 }
 
 .text-custom {
@@ -42,21 +42,16 @@ footer {
 
 /* Main Content Styles */
 main {
-  flex: 1;
+  flex: 1 0 auto;
   padding: 2rem 0;
 }
 
 /* Headings */
-h1,
-h2,
-h3,
-h4,
-h5
-{
+h1, h2, h3, h4, h5 {
   color: #6c2722;
 }
-h6
-{
+
+h6 {
   color: #000000;
   font-style: italic;
 }
@@ -77,6 +72,12 @@ nav a {
   border: none;
   border-radius: 0.25rem;
   overflow: hidden;
+  height: 100%; /* Ensure all cards have the same height */
+  transition: transform 0.3s ease-in-out;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-5px);
 }
 
 .figure-caption {
@@ -122,8 +123,7 @@ nav a {
 .card {
   background-color: #eae7dc;
   border: none;
-  max-width: 600px;
-  margin: 0 auto;
+  height: 100%; /* Ensure all cards have the same height */
 }
 
 .text-muted {
@@ -136,14 +136,28 @@ nav a {
     padding-left: 5%;
     padding-right: 5%;
   }
-
-  .row-cols-md-2 > * {
-    flex: 0 0 auto;
-    width: 45%; /* Adjust this value to make columns narrower or wider */
-  }
 }
 
 /* Ensure gutter consistency */
 .row {
   --bs-gutter-x: 3rem; /* Corresponds to g-5 in Bootstrap */
+}
+
+/* Ensure images maintain aspect ratio and fit within cards */
+.card-img-top, .figure-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Additional styles to ensure proper alignment */
+.row-cols-1 {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.col {
+  padding-left: calc(var(--bs-gutter-x) * .5);
+  padding-right: calc(var(--bs-gutter-x) * .5);
+  margin-bottom: var(--bs-gutter-x);
 }
