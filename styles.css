@@ -52,8 +52,13 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+{
   color: #6c2722;
+}
+h6
+{
+  color: #000000;
+  font-style: italic;
 }
 
 /* Navigation Styles */
@@ -64,6 +69,7 @@ nav {
 nav a {
   margin: 0 0.5rem;
 }
+
 
 /* Portfolio Item Styles */
 .portfolio-item {
@@ -111,8 +117,28 @@ nav a {
 .card {
   background-color: #eae7dc;
   border: none;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .text-muted {
   color: #8e8d8a !important;
+}
+
+/* New Portfolio Grid Styles */
+@media (min-width: 768px) {
+  .container-fluid {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .row-cols-md-2 > * {
+    flex: 0 0 auto;
+    width: 45%; /* Adjust this value to make columns narrower or wider */
+  }
+}
+
+/* Ensure gutter consistency */
+.row {
+  --bs-gutter-x: 3rem; /* Corresponds to g-5 in Bootstrap */
 }
