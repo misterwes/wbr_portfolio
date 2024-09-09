@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Land Surface Temperature Data</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="tags" content="_project notes/dangerous heat, _project notes"/>
+        
+    </head>
+        <style>
+             body {
+   --base-background-color: #ffffff;
+   --document-background-color: var(--base-background-color);
+ }
+
+.document-wrapper {
+  /* Constants used to transform theme values to CSS */
+  --transform-line-height-factor: 1.17;
+
+  /* From template */
+  --base-text-color: #444444;
+  --base-text-secondary-color: #888888;
+  --base-text-tertiary-color: #d9d9d9;
+  --base-background-color: #ffffff;
+  --base-background-secondary-color: #F3F5F7;
+  --base-background-tertiary-color: #E4E5E6;
+  --base-stroke-color: #d9d9d9;
+  --base-stroke-secondary-color: #d9d9d9;
+  --base-accent-color: #DD4C4F;
+  --base-highlight-color: #D3FFA4;
+
+  --document-background-color: var(--base-background-color);
+  --document-text-color: var(--base-text-color);
+  --document-text-secondary-color: var(--base-text-secondary-color);
+  --document-text-light-color: var(--base-text-secondary-color);
+  --document-accent-color: var(--base-accent-color);
+  --document-cursor-color: var(--base-accent-color);
+  --document-link-color: var(--base-accent-color);
+  --document-list-marker-color: var(--base-accent-color);
+  --document-marker-color: var(--base-text-tertiary-color);
+  --document-selection-color: var(--base-selection-color);
+  --document-selection-inactive-color: var(--base-background-tertiary-color);
+  --document-text-font: "AvenirNext-Regular";
+  --document-text-size: 15px;
+  --document-line-height-multiplier: calc(
+    1.5 * var(--transform-line-height-factor)
+  );
+
+  --document-headers-text-color: var(--base-text-color);
+  --document-headers-font: "AvenirNext-Medium";
+  --document-headers-modular-scale: 1.125;
+  --document-headers-line-height-multiplier: calc(
+    1.3 * var(--transform-line-height-factor)
+  );
+  --document-headers-add-top-bottom-padding: 1;
+  --document-headers-padding-top-multiplier: 0.5;
+  --document-headers-padding-bottom-multiplier: 0.3;
+
+  --document-code-text-color: var(--base-text-color);
+  --document-code-border-color: var(--base-text-tertiary-color);
+  --document-code-background-color: var(--base-background-secondary-color);
+  --document-code-font: "Menlo-Regular";
+  --document-code-text-size-multiplier: 0.91;
+
+  --document-code-syntax-highlight-comment: #65798c;
+  --document-code-syntax-highlight-constant: #0095c9;
+  --document-code-syntax-highlight-number: #0095c9;
+  --document-code-syntax-highlight-string: #d12f1b;
+  --document-code-syntax-highlight-entity: #4a838b;
+  --document-code-syntax-highlight-keyword: #ad3da4;
+  --document-code-syntax-highlight-function: #4a838b;
+  --document-code-syntax-highlight-variable: #4a838b;
+
+  --document-task-background-color: var(--base-background-color);
+  --document-task-border-color: var(--base-text-secondary-color);
+  --document-task-check-color: var(--base-text-color);
+
+  --document-tag-background-color: var(--base-background-tertiary-color);
+  --document-tag-text-color: var(--base-text-color);
+  --document-tag-marker-color: var(--base-text-secondary-color);
+
+  --document-highlighter-background-color: var(--base-highlight-color);
+  --document-highlighter-text-color: var(--base-text-color);
+
+  --document-file-fold-color: var(--base-background-tertiary-color);
+  --document-file-background-color: var(--base-background-secondary-color);
+
+  --document-separator-border-color: var(--base-stroke-secondary-color);
+
+  --document-table-border-color: var(--base-stroke-secondary-color);
+  --document-table-cell-background-color: var(--base-background-color);
+  --document-table-cell-alternate-background-color: var(
+    --base-background-secondary-color
+  );
+}
+
+.document-wrapper,body{background-color:var(--document-background-color)}.document-wrapper h1.setext,.document-wrapper h2.setext{border-bottom:calc(2 * var(--document-hairline-width)) solid var(--document-separator-border-color);padding-bottom:.6em}.document-wrapper blockquote blockquote blockquote blockquote blockquote::before,.document-wrapper blockquote blockquote blockquote::before,.document-wrapper blockquote::before{background-color:var(--document-list-marker-color)}.document-wrapper a:hover,.document-wrapper mark{text-decoration:inherit}.document-wrapper td[data-alignment="1"],.document-wrapper th{text-align:left}.document-wrapper :after,.document-wrapper :before,.document-wrapper a,.document-wrapper abbr,.document-wrapper acronym,.document-wrapper address,.document-wrapper applet,.document-wrapper article,.document-wrapper aside,.document-wrapper audio,.document-wrapper b,.document-wrapper big,.document-wrapper blockquote,.document-wrapper canvas,.document-wrapper caption,.document-wrapper center,.document-wrapper cite,.document-wrapper code,.document-wrapper dd,.document-wrapper del,.document-wrapper details,.document-wrapper dfn,.document-wrapper div,.document-wrapper dl,.document-wrapper dt,.document-wrapper em,.document-wrapper embed,.document-wrapper fieldset,.document-wrapper figcaption,.document-wrapper figure,.document-wrapper footer,.document-wrapper form,.document-wrapper h1,.document-wrapper h2,.document-wrapper h3,.document-wrapper h4,.document-wrapper h5,.document-wrapper h6,.document-wrapper header,.document-wrapper hgroup,.document-wrapper i,.document-wrapper iframe,.document-wrapper ins,.document-wrapper kbd,.document-wrapper label,.document-wrapper legend,.document-wrapper li,.document-wrapper mark,.document-wrapper menu,.document-wrapper nav,.document-wrapper object,.document-wrapper ol,.document-wrapper output,.document-wrapper p,.document-wrapper pre,.document-wrapper q,.document-wrapper ruby,.document-wrapper s,.document-wrapper samp,.document-wrapper section,.document-wrapper small,.document-wrapper span,.document-wrapper strike,.document-wrapper strong,.document-wrapper summary,.document-wrapper table,.document-wrapper tbody,.document-wrapper td,.document-wrapper tfoot,.document-wrapper th,.document-wrapper thead,.document-wrapper time,.document-wrapper tr,.document-wrapper tt,.document-wrapper u,.document-wrapper ul,.document-wrapper var,.document-wrapper video{all:unset}.document-wrapper{--document-inline-padding-top-bottom:0.25em;--document-inline-padding-left-right:0.25em;--header-1-font-size:2em;--header-2-font-size:1.6em;--header-3-font-size:1.27em;--document-hairline-width:calc(var(--document-text-size) / 15);box-sizing:border-box;color:var(--document-text-color);font-family:var(--document-text-font);font-size:var(--document-text-size);line-height:var(--document-line-height-multiplier);min-height:100%;max-width:48em;width:100%;tab-size:4;margin:0 auto;padding:0 2em}body{text-rendering:optimizeLegibility}.document-wrapper:focus-visible{outline:0}.document-wrapper .marker{color:var(--document-marker-color);display:none}.document-wrapper [data-direction="2"]{direction:rtl}.document-wrapper div.footnote,.document-wrapper div.link-definition,.document-wrapper p{display:block}.document-wrapper p.blank-line::before{content:" "}.document-wrapper h1,.document-wrapper h2,.document-wrapper h3,.document-wrapper h4,.document-wrapper h5,.document-wrapper h6{font-family:var(--document-headers-font);display:block;line-height:var(--document-headers-line-height-multiplier)}.document-wrapper h1{font-size:var(--header-1-font-size);padding-block-start:0.8em;padding-block-end:0.33em}.document-wrapper h2{font-size:var(--header-2-font-size);padding-block-start:0.66em;padding-block-end:0.27em}.document-wrapper h3{font-size:var(--header-3-font-size);padding-block-start:0.53em;padding-block-end:0.27em}.document-wrapper code,.document-wrapper pre{font-size:var(--document-code-text-size-multiplier);font-family:var(--document-code-font),monospace}.document-wrapper h4,.document-wrapper h5,.document-wrapper h6{padding-block-start:0.4em;padding-block-end:0.27em}.document-wrapper h1.setext{margin-bottom:.45em}.document-wrapper h2.setext{margin-bottom:.2em}.document-wrapper .fenced-code *,.document-wrapper .fenced-code-content .marker,.document-wrapper .fenced-code-content .space,.document-wrapper .hard-linebreak-marker,.document-wrapper .image .space,.document-wrapper .image-destination,.document-wrapper .image-label,.document-wrapper .image-title,.document-wrapper .indented-code .space,.document-wrapper .link .space,.document-wrapper .link-destination,.document-wrapper .link-label,.document-wrapper .link-title,.document-wrapper .replace .text,.document-wrapper .setext-heading-marker+.line-ending,.document-wrapper .yaml-marker+.line-ending,.document-wrapper li>p>.space:first-child,.document-wrapper tr.delimiter-row{display:none}.document-wrapper ol,.document-wrapper ul{display:block;padding-inline-start:2.13em}.document-wrapper li{display:list-item;color:var(--document-text-color)}.document-wrapper .color-marker,.document-wrapper .entity-marker,.document-wrapper .fenced-code-content,.document-wrapper .fenced-code-content *,.document-wrapper .footnote-separator,.document-wrapper .link-definition-separator,.document-wrapper code.code-inline,.document-wrapper li>p{display:inline}.document-wrapper ul{list-style-type:disc}.document-wrapper li li li li li li li ul,.document-wrapper li li li li li ul,.document-wrapper li li li ul,.document-wrapper li ul{list-style:circle}.document-wrapper li li li li li li ul,.document-wrapper li li li li ul,.document-wrapper li li ul{list-style:disc}.document-wrapper li::marker{color:var(--document-list-marker-color)}.document-wrapper ol{list-style-type:none;counter-reset:custom-list-item calc(var(--data-list-start,1) - 1)}.document-wrapper ol>li{counter-increment:custom-list-item;position:relative}.document-wrapper ol>li::before{content:counter(custom-list-item) ". ";color:var(--document-list-marker-color);position:absolute;transform:translate(calc(-100% - .33em),0)}.document-wrapper ol>li[data-big-number=true]{margin-inline-start:-2.05em}.document-wrapper ol>li[data-big-number=true]::before{position:static;padding-inline-end:0.25em}.document-wrapper ol>li[data-list-type="1"]:before{content:counter(custom-list-item) ") "}.document-wrapper [data-direction="2"] ol>li::before,.document-wrapper ol[data-direction="2"]>li::before{transform:translate(calc(100% + .33em),0)}.document-wrapper li[role=checkbox]{list-style:none;position:relative}.document-wrapper li[aria-checked=true]{color:var(--document-text-secondary-color)}.document-wrapper .todo-checkbox{display:inline-block;margin-left:-1.7em;margin-right:.5em}.document-wrapper .todo-checkbox svg{display:inline-block;margin-bottom:-.3em}.document-wrapper blockquote{display:block;padding-inline-start:2.13em;position:relative}.document-wrapper code,.document-wrapper mark{padding:var(--document-inline-padding-top-bottom) var(--document-inline-padding-left-right)}.document-wrapper blockquote::before{content:"";position:absolute;top:.2em;left:1em;width:.13em;height:calc(100% - .4em);border:var(--document-hairline-width) solid var(--document-list-marker-color);border-radius:.33em}.document-wrapper code,.document-wrapper pre.fenced-code,.document-wrapper pre.indented-code,.document-wrapper pre.yaml{color:var(--document-code-text-color);background-color:var(--document-code-background-color);border-radius:.25em}.document-wrapper [data-direction="2"] blockquote::before,.document-wrapper blockquote[data-direction="2"]::before{left:0;right:1em}.document-wrapper blockquote blockquote blockquote blockquote blockquote blockquote::before,.document-wrapper blockquote blockquote blockquote blockquote::before,.document-wrapper blockquote blockquote::before{background-color:transparent}.document-wrapper hr{display:block;margin-block-start:calc(var(--document-line-height-multiplier) * 0.5em);margin-block-end:calc(var(--document-line-height-multiplier) * -0.5em);border-top:var(--document-hairline-width) solid var(--document-separator-border-color)}.document-wrapper pre{display:block;white-space:pre-wrap}.document-wrapper pre.indented-code{padding-inline-start:2.13em}.document-wrapper pre.fenced-code,.document-wrapper pre.yaml{padding:0 .5em}.document-wrapper .fenced-code::before{content:"\200B"}.document-wrapper code{font-weight:400;font-style:normal;display:block}.document-wrapper mark,.document-wrapper mark code{color:var(--document-text-color);background-color:var(--document-highlighter-background-color)}.document-wrapper em,.document-wrapper i{font-family:AvenirNext-Italic}.document-wrapper b,.document-wrapper strong,.document-wrapper th{font-family:AvenirNext-Bold}.document-wrapper mark{unicode-bidi:embed;border-radius:.25em}.document-wrapper u{text-decoration:underline;text-decoration-color:var(--document-accent-color);unicode-bidi:embed}.document-wrapper s,.document-wrapper strike{text-decoration:line-through}.document-wrapper a{color:var(--document-link-color);unicode-bidi:embed;cursor:pointer}.document-wrapper .wiki-separator-marker{display:inline;color:inherit}.document-wrapper .link-definition-title{color:var(--document-text-light-color)}.document-wrapper .footnote-ref{font-size:.9em;vertical-align:super}.document-wrapper span.entity{direction:ltr;unicode-bidi:embed;color:var(--document-code-syntax-highlight-entity)}.document-wrapper span.escape{unicode-bidi:embed}.document-wrapper .color{font-family:var(--document-code-font),monospace;font-size:var(--document-code-text-size-multiplier);padding-inline-start:1.2em;position:relative;direction:ltr;unicode-bidi:embed}.document-wrapper .color::before{content:"";position:absolute;width:.9em;height:.9em;left:0;bottom:0;transform:translateY(-15%);border:var(--document-hairline-width) solid rgb(0,0,0,.3);border-radius:.9em;background-color:var(--data-color)}.document-wrapper .hashtag{color:var(--document-tag-text-color);background-color:var(--document-tag-background-color);border-radius:1em;padding:calc(var(--document-inline-padding-top-bottom) - 2 * var(--document-hairline-width)) calc(var(--document-inline-padding-left-right) + .3em);unicode-bidi:embed}.document-wrapper .hashtag>.marker{display:inline;color:var(--document-tag-marker-color);padding:0}.document-wrapper table{display:block;max-width:fit-content;overflow-x:auto;border-collapse:separate;border-spacing:0;border:var(--document-hairline-width) solid var(--document-table-border-color);border-radius:.33em;margin-bottom:calc(var(--document-line-height-multiplier) * 1em)}.document-wrapper table[data-direction="2"]{margin-left:auto;direction:ltr}.document-wrapper tr{display:table-row;background-color:var(--document-table-cell-background-color)}.document-wrapper tr.header-row,.document-wrapper tr:nth-child(odd){background-color:var(--document-table-cell-alternate-background-color)}.document-wrapper td,.document-wrapper th{box-sizing:border-box;display:table-cell;padding:.37em .75em;min-width:5em;border-right:var(--document-hairline-width) solid var(--document-table-border-color)}.document-wrapper td:last-of-type,.document-wrapper th:last-of-type{border:none}.document-wrapper table[data-direction="2"] td{margin-left:auto}.document-wrapper td[data-alignment="2"]{text-align:right}.document-wrapper td[data-alignment="3"]{text-align:center}.document-wrapper .code_comment{color:var(--document-code-syntax-highlight-comment)}.document-wrapper .code_constant{color:var(--document-code-syntax-highlight-constant)}.document-wrapper .code_number{color:var(--document-code-syntax-highlight-number)}.document-wrapper .code_string{color:var(--document-code-syntax-highlight-string)}.document-wrapper .code_entity{color:var(--document-code-syntax-highlight-entity)}.document-wrapper .code_keyword{color:var(--document-code-syntax-highlight-keyword)}.document-wrapper .code_function{color:var(--document-code-syntax-highlight-function)}.document-wrapper .code_variable{color:var(--document-code-syntax-highlight-variable)}.document-wrapper img{max-width:100%}.document-wrapper .pdf_preview{display:inline-block;width:100%;height:500px;background-color:#fff;overflow:hidden;padding:0;margin:0;position:relative;border-radius:4px}.document-wrapper .arrow svg #body,.document-wrapper .arrow svg #head{fill:var(--base-text-color)}.document-wrapper .todo-checkbox svg #body{stroke:var(--document-task-border-color)}.document-wrapper .todo-checkbox svg #check{fill:var(--document-task-check-color)}.document-wrapper .todo-checkbox.todo-checked svg #body{opacity:.35}.document-wrapper .todo-checkbox.todo-checked svg #check{opacity:.4}
+
+        </style>
+    <body>
+        <div class="document-wrapper">
+            <h1 id='Land Surface Temperature Data'>Land Surface Temperature Data</h1><p><b>Report date:</b> May 29, 2024<br>
+<b>TAGS:</b><span class='hashtag'><span class='hashtag-marker marker'>#</span>_project notes<span class='hashtag-separator-marker marker'>/</span>dangerous heat<span class='hashtag-marker marker'>#</span></span></p><h3 id='Project summary'>Project summary</h3><ul>
+<li>Get the right data from Google Earth Engine and understand it.</li>
+<li>Bring it into QGIS to look at it; make sure the temperature patterns it illustrates make sense.</li>
+<li>Attach the proper color scheme.</li>
+<li>Output as MB Tiles for inclusion in the <code class='code-inline'>maplibre</code> display map.</li>
+</ul><h3 id='1. Get and inspect the data.'>1. Get and inspect the data.</h3><ul>
+<li>Here is the code (written in Javascript) to acquire the data from Google Earth Engine.</li>
+</ul><pre class='fenced-code'><code class='fenced-code-content'>// Define the geography of interest
+var bexarCounty = ee.FeatureCollection('TIGER/2016/Counties')
+                    .filter(ee.Filter.eq('NAME', 'Bexar'));
+
+// Function to load and preprocess data for a given year
+function processYear(year) {
+  var startDate = ee.Date.fromYMD(year, 5, 1);
+  var endDate = ee.Date.fromYMD(year, 9, 30);
+
+  var dataset = ee.ImageCollection('MODIS/061/MOD11A1')
+                    .filterDate(startDate, endDate)
+                    .filterBounds(bexarCounty)
+                    .select('LST_Day_1km');
+
+  var meanLST = dataset.mean().multiply(0.02);
+  var LSTCelsius = meanLST.subtract(273.15);
+  var LSTFahrenheit = LSTCelsius.multiply(1.8).add(32);
+
+  var reductionParams = {
+    reducer: ee.Reducer.minMax(),
+    geometry: bexarCounty,
+    scale: 1000,
+    maxPixels: 1e9
+  };
+  var minMax = LSTFahrenheit.reduceRegion(reductionParams);
+  minMax.evaluate(function(result) {
+    console.log('Year ' + year + ' - Min: ' + result['LST_Day_1km_min'] + ', Max: ' + result['LST_Day_1km_max']);
+  });
+
+  Export.image.toDrive({
+    image: LSTFahrenheit,
+    description: 'Average_Daytime_LST_' + year,
+    folder: 'MODIS_LST_Fahrenheit_Day',
+    fileNamePrefix: 'Bexar_County_LST_' + year,
+    region: bexarCounty.geometry(),
+    scale: 1000,
+    fileFormat: 'GeoTIFF',
+    maxPixels: 1e9
+  });
+
+  // Reproject the LST image to UTM Zone 14N (adjust based on your study area)
+  var reprojectedLST = LSTFahrenheit.reproject({
+    crs: 'EPSG:32614',
+    scale: 1000
+  });
+
+  var visParams = {min: 84, max: 107, palette: ['green', 'yellow', 'red']};
+  Map.addLayer(reprojectedLST, visParams, 'Average Daytime LST ' + year);
+}
+
+// Loop over each year from 2013 to 2023
+for (var year = 2013; year &lt;= 2023; year++) {
+  processYear(year);
+}
+</code></pre><br>
+<ul>
+<li>Once aquired, send it to Google Drive and then download it onto the local machine as a TIFF,</li>
+<li>Use QGIS to assess. In this case, that means get the low and high temperature points.</li>
+<li>We need the temperatures so we can create a color scheme for the data viz. (<a href='Claude.ai'>Claude.ai</a> helped create the colors I used).</li>
+</ul><br>
+<h3 id='2. Clean and process the data'>2. Clean and process the data</h3><ul>
+<li>I created a Jupyter notebook for this part. Here’s the code where I give it a color scheme that makes sense:</li>
+</ul><pre class='fenced-code'><code class='fenced-code-content'>import rasterio
+from rasterio.plot import show
+from matplotlib import pyplot as plt
+from matplotlib.colors import LinearSegmentedColormap
+
+# Define the minimum and maximum values from your CSV
+min_value = 69.61
+max_value = 111.82
+
+# Create a custom color map
+colors = [
+    '#006837', '#1a9850', '#66bd63', '#a6d96a', '#d9ef8b',
+    '#ffffbf', '#fee08b', '#fdae61', '#f46d43', '#d73027'
+]  # Define your desired colors
+custom_cmap = LinearSegmentedColormap.from_list('custom', colors)
+
+# Your raster file paths
+raster_files = ['./MODIS_A1_daytimeLST/TIFF/Bexar_County_LST_2013.tif',
+                './MODIS_A1_daytimeLST/TIFF/Bexar_County_LST_2014.tif',
+                './MODIS_A1_daytimeLST/TIFF/Bexar_County_LST_2015.tif',
+                './MODIS_A1_daytimeLST/TIFF/Bexar_County_LST_2016.tif',
+                './MODIS_A1_daytimeLST/TIFF/Bexar_County_LST_2017.tif',
+                './MODIS_A1_daytimeLST/TIFF/Bexar_County_LST_2018.tif',
+                './MODIS_A1_daytimeLST/TIFF/Bexar_County_LST_2019.tif',
+                './MODIS_A1_daytimeLST/TIFF/Bexar_County_LST_2020.tif',
+                './MODIS_A1_daytimeLST/TIFF/Bexar_County_LST_2021.tif',
+                './MODIS_A1_daytimeLST/TIFF/Bexar_County_LST_2022.tif',
+                './MODIS_A1_daytimeLST/TIFF/Bexar_County_LST_2023.tif']
+
+for raster_file in raster_files:
+    # Open the raster file
+    with rasterio.open(raster_file) as src:
+        raster_data = src.read(1)
+
+        # Normalize the raster data based on the min and max values
+        normalized_data = (raster_data - min_value) / (max_value - min_value)
+
+        # Apply the custom color map to the normalized data
+        colored_data = custom_cmap(normalized_data, bytes=True)
+
+        # Remove the alpha channel from the colored data
+        colored_data = colored_data[:, :, :3]
+
+        # Transpose the colored data to (bands, height, width)
+        colored_data = colored_data.transpose((2, 0, 1))
+
+        # Save the colored raster as a new file
+        colored_raster_file = 'colored_' + raster_file.split('/')[-1]
+        with rasterio.open(
+            colored_raster_file,
+            'w',
+            driver='GTiff',
+            width=src.width,
+            height=src.height,
+            count=3,  # RGB bands
+            dtype=rasterio.uint8,
+            crs=src.crs,
+            transform=src.transform,
+        ) as dst:
+            dst.write(colored_data)
+</code></pre><br>
+<ul>
+<li>And here’s the code where I convert the <code class='code-inline'>GEOTiff</code> files to <code class='code-inline'>MBTiles</code>:</li>
+</ul><pre class='fenced-code'><code class='fenced-code-content'>import os
+import subprocess
+import rasterio
+from rasterio.crs import CRS
+from rasterio.warp import calculate_default_transform, reproject, Resampling
+
+# Your colored raster file paths
+colored_raster_files = ['./MODIS_A1_daytimeLST/TIFF/colored/colored_Bexar_County_LST_2013.tif',
+                        './MODIS_A1_daytimeLST/TIFF/colored/colored_Bexar_County_LST_2014.tif',
+                        './MODIS_A1_daytimeLST/TIFF/colored/colored_Bexar_County_LST_2015.tif',
+                        './MODIS_A1_daytimeLST/TIFF/colored/colored_Bexar_County_LST_2016.tif',
+                        './MODIS_A1_daytimeLST/TIFF/colored/colored_Bexar_County_LST_2017.tif',
+                        './MODIS_A1_daytimeLST/TIFF/colored/colored_Bexar_County_LST_2018.tif',
+                        './MODIS_A1_daytimeLST/TIFF/colored/colored_Bexar_County_LST_2019.tif',
+                        './MODIS_A1_daytimeLST/TIFF/colored/colored_Bexar_County_LST_2020.tif',
+                        './MODIS_A1_daytimeLST/TIFF/colored/colored_Bexar_County_LST_2021.tif',
+                        './MODIS_A1_daytimeLST/TIFF/colored/colored_Bexar_County_LST_2022.tif',
+                        './MODIS_A1_daytimeLST/TIFF/colored/colored_Bexar_County_LST_2023.tif']
+
+for colored_raster_file in colored_raster_files:
+    # Open the colored raster file
+    with rasterio.open(colored_raster_file) as src:
+        # Define the target CRS for MBTiles (Web Mercator)
+        dst_crs = CRS.from_epsg(3857)
+
+        # Calculate the target transform and dimensions
+        transform, width, height = calculate_default_transform(
+            src.crs, dst_crs, src.width, src.height, *src.bounds)
+
+        # Create the reprojected raster file path
+        reprojected_raster_file = colored_raster_file.replace('.tif', '_reprojected.tif')
+
+        # Reproject the colored raster to the target CRS
+        with rasterio.open(
+            reprojected_raster_file,
+            'w',
+            driver='GTiff',
+            width=width,
+            height=height,
+            count=3,
+            dtype=rasterio.uint8,
+            crs=dst_crs,
+            transform=transform
+        ) as dst:
+            for i in range(1, src.count + 1):
+                reproject(
+                    source=rasterio.band(src, i),
+                    destination=rasterio.band(dst, i),
+                    src_transform=src.transform,
+                    src_crs=src.crs,
+                    dst_transform=transform,
+                    dst_crs=dst_crs,
+                    resampling=Resampling.nearest,
+                    num_threads=4
+                )
+
+        # Create the MBTiles file path
+        mbtiles_file = colored_raster_file.replace('.tif', '.mbtiles')
+
+        # Use the gdal_translate command to create the MBTiles file
+        subprocess.run([
+            'gdal_translate',
+            '-of', 'MBTiles',
+            '-co', 'TILE_FORMAT=JPEG',
+            '-co', 'QUALITY=90',
+            '-co', 'ZOOM_LEVELS=0-5',
+            reprojected_raster_file,
+            mbtiles_file
+        ])
+
+        # Remove the reprojected raster file
+        os.remove(reprojected_raster_file)
+</code></pre><h3 id='Get the MBTiles onto Wheeljack and then create the URL:'>Get the MBTiles onto Wheeljack and then create the URL:</h3><p>Use this code in a Jupyter notebook:</p><pre class='fenced-code'><code class='fenced-code-content'>baseURL = "https://maps.hdndevhub.com/"
+extension = ".png"
+
+def getTileURL(baseURL, folderPath, fileName, extension):
+    return baseURL + folderPath + "tileserver.php?/" + fileName + ".json?/" + fileName + "/{z}/{x}/{y}" + extension
+
+# Generate URLs for each year from 2013 to 2023
+for year in range(2013, 2024):
+    folderPath = f"devhub/tx-heat/day_{year}/"
+    fileName = f"colored_Bexar_County_LST_{year}"
+    
+    tileURL = getTileURL(baseURL, folderPath, fileName, extension)
+    print(tileURL)
+</code></pre><br>
+
+        </div>
+    </body>
+</html>
