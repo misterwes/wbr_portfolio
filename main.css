@@ -114,6 +114,43 @@ h1 {
   background-clip: text;
 }
 
+/* Distinctive name styling */
+h1.name {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  margin-top: 2rem;
+  letter-spacing: 0.02em;
+  font-family: 'Inter', monospace;
+  text-transform: lowercase;
+  color: #fffef0;
+  background: linear-gradient(135deg, #fffef0 0%, #fef9d8 50%, #fffef0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+}
+
+/* Blinking cursor */
+.cursor {
+  color: #ffffff;
+  background: transparent;
+  -webkit-text-fill-color: #ffffff;
+  animation: blink 1s step-end infinite;
+  margin-left: 0.1em;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
 /* Navigation styles */
 nav {
   margin-bottom: 1.5rem;
@@ -182,7 +219,6 @@ footer {
 .project h2 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
-  text-transform: lowercase;
   color: #1a4649;
 }
 

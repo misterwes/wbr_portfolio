@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ page.title }} - wes ratko</title>
+    <!-- Load Inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Merriweather:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Load the global stylesheet -->
+    <link rel="stylesheet" href="/main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="name">
+        <a href="/">wes ratko</a><span class="cursor">|</span>
+      </h1>
+      <p class="tagline">data journalist &amp; interactive developer</p>
+      <nav>
+        <a href="/about.html">about</a>
+        <a href="/resources/resume.pdf" target="_blank">resume</a>
+        <a href="/blog/">blog</a>
+      </nav>
+      <div class="content">{{ content }}</div>
+    </div>
+  </body>
+</html>
