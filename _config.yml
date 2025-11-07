@@ -1,0 +1,9 @@
+title: "Wes Portfolio Blog"
+author: "Wes"
+markdown: kramdown
+theme: minima
+permalink: pretty
+
+# Note: baseurl is left blank for GitHub Pages project sites.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: ""       # the base hostname & protocol for your site
