@@ -1,9 +1,9 @@
-title: "Wes Portfolio Blog"
+title: "Wes Portfolio"
 author: "Wes"
 markdown: kramdown
-theme: minima
 permalink: pretty
 
+# Leave theme unspecified to use our custom layouts instead of the default minima theme.
 # Note: baseurl is left blank for GitHub Pages project sites.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: ""       # the base hostname & protocol for your site
