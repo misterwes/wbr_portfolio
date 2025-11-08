@@ -268,10 +268,12 @@ nav a:hover {
 }
 
 .project img {
-  max-width: 300px;
   width: 100%;
-  height: auto;
-  border-radius: 4px;
+  max-width: 600px;
+  height: 400px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 8px;
   margin-bottom: 0.75rem;
 }
 
