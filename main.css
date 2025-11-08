@@ -18,7 +18,7 @@ body::before {
   top: 0;
   left: 0;
   right: 0;
-  height: 8px;
+  height: 12px;
   background: linear-gradient(
     90deg,
     #00a8a8 0%,
@@ -146,6 +146,35 @@ nav a:hover {
   transform: translateY(-2px);
 }
 
+/* Section navigation */
+.section-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 2rem auto 1.5rem;
+  padding: 0.75rem;
+  max-width: 600px;
+}
+
+.section-nav a {
+  color: #d0e8e8;
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid #d4a017;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.section-nav a:hover {
+  color: #ffffff;
+  background-color: rgba(212, 160, 23, 0.2);
+  border-color: #f4c430;
+  transform: translateY(-1px);
+}
+
 /* ==========================================================================
    CONTENT CARDS (About page, etc)
    ========================================================================== */
@@ -158,16 +187,14 @@ nav a:hover {
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border-left: 6px solid #d4a017;
+  transition: all 0.3s ease;
 }
 
-/* First paragraph - special serif styling */
-.content > p:first-of-type {
-  font-family: 'Merriweather', Georgia, serif;
-  font-size: 1.25rem;
-  line-height: 1.8;
-  font-weight: 300;
-  color: #2c3e50;
-  margin-bottom: 1.5rem;
+.content:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+  transform: translateX(4px);
+  border-left-color: #f4c430;
 }
 
 .content h2 {
