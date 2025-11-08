@@ -3,12 +3,44 @@ layout: default
 title: 'Blog'
 ---
 
-<h2>Recent Posts</h2>
-<ul>
-  {% for post in site.posts %}
-  <li>
-    <a href="{{ post.url }}">{{ post.title }}</a> – {{ post.date | date: "%B %d,
-    %Y" }}
-  </li>
+<h3 class="section-header" id="coding">Coding</h3>
+<div class="blog-section">
+  {% for post in site.categories.coding %}
+  <div class="project">
+    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+    <h4>{{ post.date | date: "%B %d, %Y" }}</h4>
+    {% if post.excerpt %}
+    <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+    {% endif %}
+    <a href="{{ post.url }}">Read more →</a>
+  </div>
   {% endfor %}
-</ul>
+</div>
+
+<h3 class="section-header" id="mapping">Mapping</h3>
+<div class="blog-section">
+  {% for post in site.categories.mapping %}
+  <div class="project">
+    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+    <h4>{{ post.date | date: "%B %d, %Y" }}</h4>
+    {% if post.excerpt %}
+    <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+    {% endif %}
+    <a href="{{ post.url }}">Read more →</a>
+  </div>
+  {% endfor %}
+</div>
+
+<h3 class="section-header" id="thinking">Thinking</h3>
+<div class="blog-section">
+  {% for post in site.categories.thinking %}
+  <div class="project">
+    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+    <h4>{{ post.date | date: "%B %d, %Y" }}</h4>
+    {% if post.excerpt %}
+    <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+    {% endif %}
+    <a href="{{ post.url }}">Read more →</a>
+  </div>
+  {% endfor %}
+</div>
