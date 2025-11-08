@@ -1,9 +1,18 @@
-title: "Wes Portfolio"
-author: "Wes"
+# Site metadata - appears in page titles, RSS feeds, and meta tags
+title: 'Wes Portfolio'
+author: 'Wes'
+
+# Markdown processor - kramdown is Jekyll's default and supports GitHub Flavored Markdown
 markdown: kramdown
+
+# URL structure - 'pretty' removes .html extensions (e.g., /about/ instead of /about.html)
 permalink: pretty
 
 # Leave theme unspecified to use our custom layouts instead of the default minima theme.
 # Note: baseurl is left blank for GitHub Pages project sites.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: ""       # the base hostname & protocol for your site
+
+# Subpath for your site - use "" for root domain or "/blog" if site is in a subdirectory
+baseurl: ''
+
+# Full URL of your site - leave blank for GitHub Pages to auto-configure with your domain
+url: ''
