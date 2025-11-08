@@ -3,7 +3,7 @@ html,
 body {
   font-family: 'Inter', sans-serif;
   color: #333;
-  background-color: #1a2e35;
+  background-color: #3d4f5d;
   margin: 0;
   padding: 0;
 }
@@ -18,11 +18,11 @@ body::before {
   height: 8px;
   background: linear-gradient(
     90deg,
-    #1a4649 0%,
-    #3c5977 25%,
-    #6d9496 50%,
-    #35503d 75%,
-    #1a4649 100%
+    #00a8a8 0%,
+    #0077b6 25%,
+    #48cae4 50%,
+    #2a9d8f 75%,
+    #00a8a8 100%
   );
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -206,20 +206,20 @@ footer {
   padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  border-left: 6px solid #6d9496;
+  border-left: 6px solid #f4c430;
   transition: all 0.3s ease;
 }
 
 .project:hover {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
   transform: translateX(4px);
-  border-left-color: #d0e8e8;
+  border-left-color: #ffe100;
 }
 
 .project h2 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
-  color: #1a4649;
+  color: #0077b6;
 }
 
 .project h4 {
