@@ -213,7 +213,7 @@ footer {
 .project:hover {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
   transform: translateX(4px);
-  border-left-color: #ffe100;
+  border-left-color: #ffff1b;
 }
 
 .project h2 {
