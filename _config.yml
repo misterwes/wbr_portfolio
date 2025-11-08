@@ -1,6 +1,6 @@
 # Site metadata - appears in page titles, RSS feeds, and meta tags
-title: 'Wes Portfolio'
-author: 'Wes'
+title: 'Wesley Ratko Portfolio'
+author: 'Wesley Ratko'
 
 # Markdown processor - kramdown is Jekyll's default and supports GitHub Flavored Markdown
 markdown: kramdown
