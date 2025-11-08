@@ -199,20 +199,22 @@ footer {
 }
 
 /* Section headers */
-.section-header {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #fffef0;
-  margin: 3rem 0 1.5rem;
-  text-align: left;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  border-bottom: 2px solid #f4c430;
-  padding-bottom: 0.5rem;
+h3.section-header {
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+  color: #fffef0 !important;
+  margin: 3rem 0 1.5rem !important;
+  text-align: left !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  border-bottom: 2px solid #f4c430 !important;
+  padding-bottom: 0.5rem !important;
+  background: none !important;
+  background-color: transparent !important;
 }
 
-.section-header:first-of-type {
-  margin-top: 2rem;
+h3.section-header:first-of-type {
+  margin-top: 2rem !important;
 }
 
 /* Projects section styles */
