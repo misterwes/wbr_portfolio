@@ -198,6 +198,23 @@ footer {
   color: #666;
 }
 
+/* Section headers */
+.section-header {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #fffef0;
+  margin: 3rem 0 1.5rem;
+  text-align: left;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-bottom: 2px solid #f4c430;
+  padding-bottom: 0.5rem;
+}
+
+.section-header:first-of-type {
+  margin-top: 2rem;
+}
+
 /* Projects section styles */
 .project {
   margin-bottom: 2rem;
@@ -206,7 +223,7 @@ footer {
   padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  border-left: 6px solid #f4c430;
+  border-left: 6px solid #d4a017;
   transition: all 0.3s ease;
 }
 
