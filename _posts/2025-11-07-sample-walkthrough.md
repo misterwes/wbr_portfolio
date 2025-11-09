@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Sample Walkthrough"
+title: 'Sample Walkthrough'
 ---
 
-This is a sample blog post to demonstrate how your Jekyll blog can host walkthroughs, post‑mortems and explainers.  
+This is a sample notebook entry to demonstrate how your Jekyll notebook can host walkthroughs, post‑mortems and explainers.
 
-Use standard Markdown to structure your narrative, embed code snippets and link to external resources.  
+Use standard Markdown to structure your narrative, embed code snippets and link to external resources.
 
 For example, to embed an image stored in the `assets/images` folder, use the Markdown syntax:
 
