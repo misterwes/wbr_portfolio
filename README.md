@@ -4,9 +4,9 @@ Personal portfolio and notebook for data journalism, interactive development, an
 
 ## What's Here
 
-- **Portfolio**: Interactive projects and investigations from the San Antonio Express-News
-- **Notebook**: Technical walkthroughs, mapping tutorials, and process documentation
-- **Built with**: Jekyll, vanilla JS, and a healthy skepticism of over-engineering
+- **Portfolio**: Interactive projects and investigations from the San Antonio Express-News.
+- **Notebook**: Technical walkthroughs, mapping tutorials, process documentation, my thoughts on issues about politics, philosophy, parenting, and life.
+- **Built with**: Jekyll, vanilla JS, and a healthy aversion of over-engineered code bases.
 
 ## Local Development
 
@@ -26,8 +26,8 @@ View at `http://localhost:4000`
 
 ## Philosophy
 
-Form follows function. Every line of code should justify its existence. If you can't explain why something's there, it probably shouldn't be.
+Form must always follow function. As a writer, I learned that good writing becomes great when it's edited for length, including only that which is essential. Such is the same with web design. My hope for this site is to provide the user with information about me as fast as possible. No frills.
 
 ---
 
-Built in San Antonio, TX · [wesleyratko.com](https://wesleyratko.com)
+Built with love in New Jersey · [vizwiz.dev](https://vizwiz.dev)
