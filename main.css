@@ -95,10 +95,36 @@ h1.name a {
 /* Tagline */
 .tagline {
   margin-top: 0.25rem;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
   font-size: 1.2rem;
   color: #d0e8e8;
   font-weight: 300;
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.social-links a {
+  color: #d0e8e8;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-links a:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.social-links svg {
+  width: 24px;
+  height: 24px;
 }
 
 /* Section headers for project categories */
