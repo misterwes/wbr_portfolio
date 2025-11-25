@@ -6,7 +6,10 @@ categories: [mapping]
 
 I used some code to take the pedestrian crash points and highlight the corridor segments. Instead of drawing an arbitrary hexagon grid to find crash clusters, I used the data points themselves to indicate the linear pattern from which we can identify problem corridors where multiple pedestrians are hurt over time. That looks like these:
 
-![Pedestrian crash corridors map](/assets/ped-crash-corridors.png)
+<figure style="margin: 2rem 0; text-align: center;">
+  <img src="/assets/ped-crash-corridors.png" alt="Pedestrian crash corridors map" style="width: 100%; max-width: 100%; height: auto; border-radius: 4px;">
+  <figcaption style="margin-top: 0.5rem; font-size: 0.9rem; color: #666; font-style: italic;">Pedestrian crash corridors identified using DBSCAN clustering and PCA directional analysis</figcaption>
+</figure>
 
 To do this, I used the processed data I mapped initially. That data contains crashes without any coordinates or geography. Those had to be removed before the code would run. So Caveat \#1: this analysis only includes crashes for which a location was provided in the crash data.
 
