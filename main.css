@@ -341,6 +341,40 @@ nav a:hover {
 }
 
 /* ==========================================================================
+   CODE BLOCKS
+   ========================================================================== */
+
+.content pre {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-left: 4px solid #0077b6;
+  border-radius: 4px;
+  padding: 1rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.content code {
+  background-color: #f5f5f5;
+  border-radius: 3px;
+  padding: 0.2rem 0.4rem;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 0.85rem;
+  color: #c7254e;
+}
+
+.content pre code {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+/* ==========================================================================
    FOOTER
    ========================================================================== */
 
