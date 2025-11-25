@@ -345,15 +345,19 @@ nav a:hover {
    ========================================================================== */
 
 .content pre {
-  background-color: #2b2b2b;
   border: 1px solid #444;
   border-left: 4px solid #f4c430;
   border-radius: 4px;
-  padding: 1rem;
+  padding: 0;
   overflow-x: visible;
+  margin: 1.5rem 0;
+}
+
+.content pre code {
+  display: block;
+  padding: 1rem;
   white-space: pre-wrap;
   word-wrap: break-word;
-  margin: 1.5rem 0;
   font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
   font-size: 0.9rem;
   line-height: 1.5;
@@ -366,14 +370,6 @@ nav a:hover {
   font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
   font-size: 0.85rem;
   color: #c7254e;
-}
-
-.content pre code {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  color: #e8e8e8;
-  font-size: 0.9rem;
 }
 
 /* ==========================================================================
