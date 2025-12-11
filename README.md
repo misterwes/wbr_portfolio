@@ -30,4 +30,4 @@ Form must always follow function. As a writer, I learned that good writing becom
 
 ---
 
-Built with love in New Jersey · [vizwiz.dev](https://vizwiz.dev)
+Built with love in New Jersey · [wesleyratko.dev](https://wesleyratko.dev)
